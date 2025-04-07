@@ -1,0 +1,49 @@
+﻿using System;
+using System.IO;
+using System.Text.Json;
+// using Newtonsoft.Json;
+
+namespace cobaJSON1 
+{
+    public class DataMahasiswa_103022300082
+    {
+        //public string NIM { get; set; }
+        //public string Namadepan { get; set; }
+        //public string Namabelakang { get; set;}
+        //public string Fakultas { get; set; }
+
+        public string NIM { get; set; }
+        public string Namadepan { get; set; }
+        public string Namabelakang { get; set; }
+        public string Fakultas { get; set; }
+
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
+        public DataMahasiswa_103022300082(){}
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
+
+        //public string GetNIM() { return nim; }
+        //public void SetNIM(string nim) { this.nim = nim; }
+        //public string GetNamaDepan() { return namadepan; }
+        //public void SetNamaDepan(string namadepan) { this.namadepan = namadepan; }
+        //public string GetNamaBelakang() { return namabelakang; }
+        //public void SetNamaBelakang(string namabelakang) { this.namabelakang = namabelakang; }
+        //public string GetFakultas() { return fakultas; }
+        //public void SetFakultas(string fakultas) { this.fakultas = fakultas; }
+
+        public static DataMahasiswa_103022300082 ReadJSON(string filePath)
+        {
+                string jsonData = File.ReadAllText(filePath);
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+            DataMahasiswa_103022300082 mahasiswa = JsonSerializer.Deserialize<DataMahasiswa_103022300082>(jsonData);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+                              // DataMahasiswa_103022300082 mahasiswa = JsonConvert.DeserializeObject<DataMahasiswa_103022300082>(jsonData);
+            return mahasiswa;
+                // return JsonSerializer.Deserialize<DataMahasiswa>(jsonData);
+        }
+
+        public void PrintMahasiswa()
+        {
+            Console.WriteLine($"Nama {Namadepan} {Namabelakang} dengan nim {NIM} dari fakultas {Fakultas}");
+        }
+    }
+}
