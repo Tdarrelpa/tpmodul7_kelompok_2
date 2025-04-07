@@ -1,4 +1,4 @@
-﻿using tpmodul07_kelompok02;
+﻿using tpmodul7_kelompok_2;
 
 DataMahasiswa103022300121 dataMahasiswa103022300121 = new DataMahasiswa103022300121();
 KuliahMahasiswa103022300121 kuliahMahasiswa103022300121 = new KuliahMahasiswa103022300121();

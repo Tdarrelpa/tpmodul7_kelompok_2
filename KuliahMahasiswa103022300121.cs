@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using static tpmodul07_kelompok02.DataMahasiswa103022300121;
-using static tpmodul07_kelompok02.KuliahMahasiswa103022300121;
+using static tpmodul7_kelompok_2.DataMahasiswa103022300121;
+using static tpmodul7_kelompok_2.KuliahMahasiswa103022300121;
 
-namespace tpmodul07_kelompok02
+namespace tpmodul7_kelompok_2
 {
     class KuliahMahasiswa103022300121
     {
