@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cobaJSON2;
+using System;
 using System.IO;
 using System.Text.Json;
 // using Newtonsoft.Json;
@@ -27,13 +28,20 @@ namespace cobaJSON1
 
         public static DataMahasiswa_103022300082 ReadJSON(string filePath)
         {
+            try
+            {
                 string jsonData = File.ReadAllText(filePath);
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-            DataMahasiswa_103022300082 mahasiswa = JsonSerializer.Deserialize<DataMahasiswa_103022300082>(jsonData);
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-                              // DataMahasiswa_103022300082 mahasiswa = JsonConvert.DeserializeObject<DataMahasiswa_103022300082>(jsonData);
-            return mahasiswa;
+                DataMahasiswa_103022300082 mahasiswa = JsonSerializer.Deserialize<DataMahasiswa_103022300082>(jsonData);
+                // DataMahasiswa_103022300082 mahasiswa = JsonConvert.DeserializeObject<DataMahasiswa_103022300082>(jsonData);
+
+                return mahasiswa;
                 // return JsonSerializer.Deserialize<DataMahasiswa>(jsonData);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            return null;
         }
 
         public void PrintMahasiswa()
