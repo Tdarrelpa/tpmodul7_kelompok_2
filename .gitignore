@@ -1,0 +1,6 @@
+# Abaikan ini saat melakukan 'git push'
+*.vs/
+bin/
+obj/
+tpmodul7_kelompok_2.csproj
+tpmodul7_kelompok_2.sln
