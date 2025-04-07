@@ -7,11 +7,6 @@ namespace cobaJSON1
 {
     public class DataMahasiswa_103022300082
     {
-        //public string NIM { get; set; }
-        //public string Namadepan { get; set; }
-        //public string Namabelakang { get; set;}
-        //public string Fakultas { get; set; }
-
         public string NIM { get; set; }
         public string Namadepan { get; set; }
         public string Namabelakang { get; set; }
